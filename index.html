@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MailHub: all your Google mail accounts in one Mac app</title>
+<meta name="description" content="MailHub is a Mac email app for Google accounts. One combined inbox for many Gmail and Google Workspace accounts, with replies sent from the address that received each email.">
+<style>
+  :root {
+    --bg: #f6f8fc; --surface: #ffffff; --text: #1f1f1f; --muted: #5e5e5e; --border: #e0e2e6;
+    --accent: #0b57d0; --accent-text: #ffffff; --chip: #eaf1fb;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #131314; --surface: #1e1f20; --text: #e3e3e3; --muted: #a8aaa9; --border: #3c4043; --accent: #a8c7fa; --accent-text: #062e6f; --chip: #282a2c; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 20px 0; }
+  header .wrap { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  header .name { font-size: 20px; font-weight: 600; }
+  header nav { margin-left: auto; display: flex; gap: 18px; font-size: 15px; }
+  header nav a { text-decoration: none; white-space: nowrap; }
+  .hero { padding-top: 40px; padding-bottom: 24px; }
+  .hero h1 { font-size: clamp(30px, 6vw, 46px); line-height: 1.15; margin: 0 0 16px; letter-spacing: -0.5px; }
+  .hero p.lead { font-size: clamp(17px, 2.4vw, 20px); color: var(--muted); max-width: 680px; margin: 0 0 24px; }
+  .note { display: inline-block; background: var(--chip); border-radius: 18px; padding: 8px 16px; font-size: 14px; color: var(--muted); }
+  section { padding: 28px 0; }
+  h2 { font-size: 24px; margin: 0 0 16px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 17px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .privacy { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
+  .privacy ul { margin: 0 0 12px; padding-left: 20px; }
+  .privacy li { margin: 4px 0; }
+  footer { border-top: 1px solid var(--border); margin-top: 32px; padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+  footer p { margin: 4px 0; }
+  @media (max-width: 520px) { header nav { gap: 16px; font-size: 15px; margin-left: 0; width: 100%; } .hero { padding-top: 20px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <svg width="36" height="36" viewBox="0 0 40 40" aria-hidden="true">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b57d0"/><stop offset="1" stop-color="#009ea8"/></linearGradient></defs>
+      <rect x="2" y="2" width="36" height="36" rx="9" fill="url(#g)"/>
+      <rect x="9" y="12.5" width="22" height="15.5" rx="2.2" fill="#fff"/>
+      <path d="M10.6 14.2 L20 21 L29.4 14.2" fill="none" stroke="#0b57d0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="30.2" cy="12.6" r="4.2" fill="#f9b000" stroke="#fff" stroke-width="1.6"/>
+    </svg>
+    <span class="name">MailHub</span>
+    <nav><a href="#features">Features</a><a href="privacy.html">Privacy policy</a><a href="mailto:qa@fyes.eu">Contact</a></nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1>All your Google mail accounts in one Mac app.</h1>
+    <p class="lead">MailHub is an email app for macOS that brings many Gmail and Google Workspace accounts into one combined inbox. It looks and works the way people already use mail in the browser, and every reply goes out from the address that received the email, with that address's signature.</p>
+    <span class="note">For macOS 14 and later. Your mail stays on your Mac: there is no MailHub server.</span>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>What it does</h2>
+      <div class="grid">
+        <div class="card"><h3>One inbox for every account</h3><p>Add as many Google accounts as you use. See them together in All inboxes, or one account at a time, each with its own colour.</p></div>
+        <div class="card"><h3>Replies from the right address</h3><p>MailHub picks the address the email was sent to (To, then Cc, then the delivery headers) and adds that address's signature. You can still change it.</p></div>
+        <div class="card"><h3>Familiar and fast</h3><p>Conversation view, labels, stars, archive, search with the usual operators, and the keyboard shortcuts you already know. Recent mail is cached so it opens instantly and works offline.</p></div>
+        <div class="card"><h3>Signatures per address</h3><p>Signatures are imported from each account's send-as settings and can be edited in MailHub. Changing From swaps the signature automatically.</p></div>
+        <div class="card"><h3>Everything stays in sync</h3><p>Archive, read, star, label, delete and send in MailHub and the change is made in your Google account, so your phone and the web see it too.</p></div>
+        <div class="card"><h3>Notifications per account</h3><p>Choose which accounts notify you about new mail. The Dock badge counts unread conversations in the accounts you include.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <h2>Privacy in short</h2>
+      <div class="privacy">
+        <ul>
+          <li>You sign in on Google's own page. MailHub never sees your password.</li>
+          <li>Your sign-in is kept in the macOS Keychain on your Mac. Your mail and settings are kept in MailHub's own storage on your Mac.</li>
+          <li>MailHub talks only to Google's APIs. There is no MailHub server, no analytics, no advertising and no tracking.</li>
+          <li>Removing an account in MailHub deletes its mail from your Mac and signs MailHub out of it.</li>
+        </ul>
+        <p>Read the full <a href="privacy.html">privacy policy</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>Questions or problems: <a href="mailto:qa@fyes.eu">qa@fyes.eu</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="privacy.html">Privacy policy</a> &middot; <a href="mailto:qa@fyes.eu">qa@fyes.eu</a></p>
+    <p>MailHub's use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+    <p>Gmail and Google Workspace are trademarks of Google LLC. MailHub is an independent app and is not affiliated with or endorsed by Google.</p>
+  </div>
+</footer>
+</body>
+</html>
