@@ -57,7 +57,7 @@
 <main class="wrap">
 <article>
   <h1>Privacy policy</h1>
-  <p class="date">Effective 20 November 2026</p>
+  <p class="date">Effective 21 November 2026</p>
 
   <p>MailHub is an email app for macOS that lets you read, organise and send mail from your Google accounts (Gmail and Google Workspace) in one place. This policy explains what data MailHub uses, where it is kept and how you can remove it.</p>
 
@@ -69,6 +69,9 @@
     <li>Your email address, name and Google account identity, to know which account you added.</li>
     <li>Your Gmail messages and conversations (headers, bodies and attachments), labels, drafts, send-as addresses and their signatures, so it can show, sync, organise and send your mail.</li>
     <li>Your Google Contacts, your "Other contacts" and, for Google Workspace accounts, your organisation's directory, only to suggest recipients while you type an address.</li>
+    <li>Your Gmail vacation responder and your Gmail filters (including blocked addresses), only to show and change them for you.</li>
+    <li>Google Drive files that are linked in your emails, only to show them and open them for you, as the account that received the email.</li>
+    <li>For a meeting invitation in your mail, the matching event in your primary Google Calendar, only to show your answer and record the answer you choose.</li>
   </ul>
 
   <h2>2. How each Google permission is used</h2>
@@ -80,22 +83,27 @@
       <tr><td><code>https://www.googleapis.com/auth/contacts.readonly</code></td><td>Search your contacts to suggest recipients while you type. Read only.</td></tr>
       <tr><td><code>https://www.googleapis.com/auth/contacts.other.readonly</code></td><td>Search your "Other contacts" (people you have emailed) to suggest recipients. Read only.</td></tr>
       <tr><td><code>https://www.googleapis.com/auth/directory.readonly</code></td><td>For Google Workspace accounts, search your organisation's directory to suggest colleagues as recipients. Read only. Personal Gmail accounts do not use it.</td></tr>
+      <tr><td><code>https://www.googleapis.com/auth/gmail.settings.basic</code></td><td>Vacation responder and filters only. Read and change your vacation responder (Settings, General; the "End now" button on the vacation banner) and read, create and delete your filters and blocked addresses (Settings, Filters and blocked addresses; "Filter messages like these"; "Block" and "Unblock"). While MailHub runs it reads the vacation responder and the filter list every few minutes to show the vacation banner and the Block or Unblock choice. MailHub does not change any other Gmail setting with it.</td></tr>
+      <tr><td><code>https://www.googleapis.com/auth/calendar.events</code></td><td>When a message contains a meeting invitation, find that invitation's event in your primary calendar (by the invitation's own ID) to show whether it is there and what you answered. When you choose Yes, No or Maybe, record your answer on that event, and Google lets the organizer know. When you choose "Remove from calendar" on a cancelled event, delete that event from your calendar. MailHub does not read, list or change any other events.</td></tr>
+      <tr><td><code>https://www.googleapis.com/auth/drive.readonly</code></td><td>Open Google Drive files that are linked in your emails, as the account that received the email. MailHub shows each linked file's name, type and owner under the message, and when you open one it downloads it (Google Docs, Sheets, Slides and Drawings as a PDF copy) to show it in MailHub. For a linked folder you open, it lists that folder's files. Read only: MailHub never changes, shares or deletes your files, and it does not browse or search the rest of your Drive. Files are downloaded only when you open them and kept temporarily on your Mac.</td></tr>
     </tbody>
   </table>
+  <p>MailHub asks for the last three permissions only when you first use those features, and you can leave them unticked on Google's consent page. Everything else keeps working; MailHub asks again when you use the feature.</p>
 
   <h2>3. Where your data is kept</h2>
   <ul>
     <li><strong>Sign-in.</strong> You sign in on Google's own sign-in page; MailHub never sees or stores your password. Google gives MailHub a long-lived sign-in token, which is stored only in the macOS Keychain on your Mac (one item per account, service <code>com.bhargava.mailhub.google-refresh-token</code>). Short-lived access tokens are kept in memory only.</li>
-    <li><strong>Mail cache.</strong> To open instantly and work offline, MailHub keeps a copy of recent mail, labels, signatures, recipient addresses seen in your mail, and your MailHub settings in a database inside its own sandboxed storage on your Mac (<code>~/Library/Containers/com.bhargava.mailhub</code>). Attachments you open are cached there too.</li>
+    <li><strong>Mail cache.</strong> To open instantly and work offline, MailHub keeps a copy of recent mail, labels, signatures, meeting invitations found in your mail and your answers to them, your vacation responder and blocked addresses, which Google permissions each account has granted, recipient addresses seen in your mail, and your MailHub settings in a database inside its own sandboxed storage on your Mac (<code>~/Library/Containers/com.bhargava.mailhub</code>). Attachments you open are cached there too.</li>
     <li><strong>Files you save.</strong> When you download or save an attachment, it is written where you choose (Downloads by default).</li>
+    <li><strong>Google Drive files you open</strong> are kept in a temporary folder inside MailHub's sandboxed storage while MailHub runs, so opening one again is instant, and deleted the next time MailHub starts. When you choose Download or Save as, a copy is written where you choose.</li>
     <li><strong>Notifications</strong> for new mail are shown by macOS on your Mac.</li>
   </ul>
   <p>None of this is uploaded anywhere by MailHub. MailHub does not have a server and does not keep any copy of your data outside your Mac.</p>
 
   <h2>4. Who receives your data</h2>
   <ul>
-    <li><strong>Google.</strong> MailHub connects only to Google's sign-in and API services (<code>accounts.google.com</code>, <code>oauth2.googleapis.com</code>, <code>gmail.googleapis.com</code>, <code>people.googleapis.com</code>) to fetch your mail and apply the actions you take. Google's handling of your data is covered by Google's own privacy policy.</li>
-    <li><strong>The people you email</strong> receive the messages you send, as with any email app.</li>
+    <li><strong>Google.</strong> MailHub connects only to Google's sign-in and API services (<code>accounts.google.com</code>, <code>oauth2.googleapis.com</code>, <code>gmail.googleapis.com</code>, <code>people.googleapis.com</code>, and <code>www.googleapis.com</code> for Google Calendar and Google Drive) to fetch your mail and apply the actions you take. Google's handling of your data is covered by Google's own privacy policy.</li>
+    <li><strong>The people you email</strong> receive the messages you send, as with any email app. When you answer an invitation whose organizer does not use Google Calendar, MailHub sends your answer to the organizer as a standard calendar reply email from the address that was invited.</li>
     <li><strong>Senders of emails with images.</strong> Like most email apps, when you open a message that contains images hosted on the web, those images are loaded from the sender's servers, which can tell that the message was opened. Links you click open in your web browser.</li>
     <li><strong>Nobody else.</strong> MailHub does not sell, rent, share or transfer your data, and does not use any analytics, advertising, tracking or crash-reporting service.</li>
   </ul>
@@ -112,7 +120,7 @@
 
   <h2>6. Keeping and removing your data</h2>
   <ul>
-    <li><strong>Remove an account in MailHub</strong> (Settings, Accounts, the delete button): MailHub revokes its access with Google, deletes the account's Keychain item and deletes the account's cached mail, attachments and settings from your Mac. Nothing changes in the Google account itself. Email addresses MailHub has learned for recipient suggestions are shared by all accounts and stay until you delete MailHub's data as described below.</li>
+    <li><strong>Remove an account in MailHub</strong> (Settings, Accounts, the delete button): MailHub revokes its access with Google, deletes the account's Keychain item and deletes the account's cached mail, invitations, attachments and settings from your Mac. Nothing changes in the Google account itself. Email addresses MailHub has learned for recipient suggestions are shared by all accounts and stay until you delete MailHub's data as described below.</li>
     <li><strong>Delete the app.</strong> To remove everything, first remove each account in MailHub, then delete MailHub from Applications. If you delete the app without removing accounts, also delete the folder <code>~/Library/Containers/com.bhargava.mailhub</code> and the MailHub items in the Keychain Access app (shown as "MailHub" followed by the email address).</li>
     <li><strong>Revoke access at Google</strong> at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. MailHub then stops syncing that account and asks you to sign in again; the mail already on your Mac stays there until you remove the account.</li>
   </ul>
