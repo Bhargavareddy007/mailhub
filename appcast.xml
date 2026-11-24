@@ -7,6 +7,16 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <description>Updates for MailHub, the Mac mail app.</description>
     <language>en</language>
     <item>
+      <title>Version 0.5.2</title>
+      <pubDate>Tue, 24 Nov 2026 15:49:44 +0000</pubDate>
+      <sparkle:version>20</sparkle:version>
+      <sparkle:shortVersionString>0.5.2</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<h1>MailHub 0.5.2</h1>
+<ul><li>Settings has a new last tab, MailHub, for the settings that are MailHub's own: links from outside senders, copies of the same email in several accounts, the check before sending, Waiting for reply, translation, scheduled send, the default email app, the Dock badge, mail on this Mac, updates and About. The other tabs now match Gmail's own settings.</li><li>Fixed: no Settings tab redraws itself any more when your accounts sync, so the page stays where you left it.</li><li>Fixed: Settings, MailHub, Updates shows the new &quot;Last checked&quot; time as soon as a check has run, also after Check now.</li><li>Fixed: the message list no longer jumps back to the top when mail syncs, a new email arrives, or you archive, star or label a conversation. This also applies to search results and to the list next to the reading pane.</li><li>Fixed: the left menu keeps its place when mail syncs and when you click a folder or label near its bottom.</li><li>Smoother syncs: when mail syncs, only the counts change in the left menu; the menu, your account picture at the top right and the From line of an open email are no longer redrawn.</li><li>Fixed: while you type a reply, the email above it no longer blinks when the draft is saved.</li><li>Fixed: the Scheduled folder and an open scheduled message keep their place when an email is sent.</li><li>Fixed: the Tasks panel keeps its place after you tick, edit or delete a task.</li><li>Fixed: a tooltip no longer appears in the top left corner of the window after a sync.</li><li>Fixed: the recipient details of a message (the arrow after &quot;to&quot;) no longer close by themselves.</li><li>Quick settings keeps keyboard focus on the option you choose with Enter or Space.</li></ul>]]></description>
+      <enclosure url="https://github.com/Bhargavareddy007/mailhub/releases/download/v0.5.2/MailHub-0.5.2.zip" length="17465900" type="application/octet-stream" sparkle:edSignature="0Qa/d2rOkGjM6vqMQDCuTmf6aREyoUNWDNB0IgaMyUQhq9g+j48Pl8JAO3Ip+bpbRGzTyIclOpr328Nht7xsCw=="></enclosure>
+    </item>
+    <item>
       <title>Version 0.5.1</title>
       <pubDate>Tue, 24 Nov 2026 14:08:40 +0000</pubDate>
       <sparkle:version>19</sparkle:version>
@@ -19,6 +29,6 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     </item>
   </channel>
 </rss><!-- sparkle-signatures:
-edSignature: MAlSU2pbX8lvBBZKe66QuVNMqaD0CflqUvBkfeWquGWAw11ZwwvrqhfsBWcVxoyyNlC25d25JZgn8+YGnHU1DQ==
-length: 2560
+edSignature: 599ICG4Gz8dBfIgW6FtSg9/31zVwg8+LE9sgf29xqHU3js+U8L614xs2sdKlrh9V0dnYtlVR8u0m8BRViT5rCQ==
+length: 4952
 -->
