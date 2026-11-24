@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MailHub: all your Google mail accounts in one Mac app</title>
-<meta name="description" content="MailHub is a Mac email app for Google accounts. One combined inbox for many Gmail and Google Workspace accounts, with replies sent from the address that received each email.">
+<title>MailHub: all your Google mail accounts in one app</title>
+<meta name="description" content="MailHub is an email app for Mac and iPhone for Google accounts. One combined inbox for many Gmail and Google Workspace accounts, with replies sent from the address that received each email.">
 <style>
   :root {
     --bg: #f6f8fc; --surface: #ffffff; --text: #1f1f1f; --muted: #5e5e5e; --border: #e0e2e6;
@@ -62,9 +62,9 @@
 
 <main>
   <div class="wrap hero">
-    <h1>All your Google mail accounts in one Mac app.</h1>
-    <p class="lead">MailHub is an email app for macOS that brings many Gmail and Google Workspace accounts into one combined inbox. It looks and works the way people already use mail in the browser, and every reply goes out from the address that received the email, with that address's signature.</p>
-    <span class="note">For macOS 14 and later, with an iPhone app on the way. Your mail stays on your devices: MailHub never stores your mail on a server.</span>
+    <h1>All your Google mail accounts in one app, on Mac and iPhone.</h1>
+    <p class="lead">MailHub is an email app for Mac and iPhone that brings many Gmail and Google Workspace accounts into one combined inbox. It looks and works the way people already use mail in the browser, and every reply goes out from the address that received the email, with that address's signature.</p>
+    <span class="note">For macOS 14 and later, and for iPhone (iOS 18 and later, in testing through TestFlight). Your mail goes only between your devices and Google: MailHub never stores your mail on a server of its own.</span>
   </div>
 
   <section id="features">
@@ -87,9 +87,9 @@
       <div class="privacy">
         <ul>
           <li>You sign in on Google's own page. MailHub never sees your password.</li>
-          <li>Your sign-in is kept in the macOS Keychain on your Mac. Your mail and settings are kept in MailHub's own storage on your Mac.</li>
-          <li>MailHub talks to Google's APIs for your mail. The only MailHub server is a small notification relay for the iPhone app, which never sees your mail. There are no analytics, no advertising and no tracking.</li>
-          <li>Removing an account in MailHub deletes its mail from your Mac and signs MailHub out of it.</li>
+          <li>Your sign-ins are kept in the Keychain on each device. When you add your first account, MailHub asks whether to share them between your own Mac and iPhone through iCloud Keychain, which is end-to-end encrypted. Only if you choose Share, your accounts' names, colours and MailHub signatures, your account groups and the details of mail you schedule or snooze on the Mac (recipients, subject and first words) are shared the same way. Your mail and settings are kept in MailHub's own storage on your devices.</li>
+          <li>Your mail goes only between your device and Google. The only MailHub server is a small push server for new-mail alerts on the iPhone, for the accounts you turn alerts on for. It never sees your mail. There are no analytics, no advertising and no tracking.</li>
+          <li>Removing an account in MailHub deletes its mail from your devices and revokes MailHub's access with Google.</li>
         </ul>
         <p>Read the full <a href="privacy.html">privacy policy</a>.</p>
       </div>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><!-- Written by scripts/publish-update.sh (README, "Automatic updates"). Edit release-notes/<version>.md, not this file. --><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+  <channel>
+    <title>MailHub</title>
+    <link>https://bhargavareddy007.github.io/mailhub/</link>
+    <description>Updates for MailHub, the Mac mail app.</description>
+    <language>en</language>
+    <item>
+      <title>Version 0.5.1</title>
+      <pubDate>Tue, 24 Nov 2026 14:08:40 +0000</pubDate>
+      <sparkle:version>19</sparkle:version>
+      <sparkle:shortVersionString>0.5.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<h1>MailHub 0.5.1</h1>
+<p>Security improvements following an independent review of 0.5.0.</p>
+<ul><li>Risky actions now ask in a native Mac window before they happen: sending an email MailHub warned about, weakening a security setting, filters that delete or archive mail, the vacation reply, Send mail as addresses, removing an account, and moving many conversations to Trash.</li><li>The signature and vacation reply editors clean what you paste into them.</li><li>Hidden text in a quoted message is no longer included when you reply or forward.</li><li>Sender checks are stricter.</li><li>When you add your first account on a device, MailHub asks whether to share sign-ins between your own Mac and iPhone through iCloud Keychain. Nothing is shared unless you choose Share.</li><li>Attachment names with unusual characters or encodings are now shown and saved correctly.</li><li>Fixed: a long conversation no longer jumps up while you type a reply at the end of it.</li><li>Fixed: Settings, Accounts no longer flashes a large account picture or redraws every time an account syncs.</li><li>The push server for iPhone alerts is hardened, and the Google notices it receives are stored only in the EU.</li></ul>]]></description>
+      <enclosure url="https://github.com/Bhargavareddy007/mailhub/releases/download/v0.5.1/MailHub-0.5.1.zip" length="17460207" type="application/octet-stream" sparkle:edSignature="TT2nviTSOagqMgozS49vO8MsEjyZT7ikJK3ZvFPk6ijpnAJUJDEffEH8Q4R+XqygpjWOQ7iYzTA7SmPH3HBZCA=="></enclosure>
+    </item>
+  </channel>
+</rss><!-- sparkle-signatures:
+edSignature: MAlSU2pbX8lvBBZKe66QuVNMqaD0CflqUvBkfeWquGWAw11ZwwvrqhfsBWcVxoyyNlC25d25JZgn8+YGnHU1DQ==
+length: 2560
+-->
